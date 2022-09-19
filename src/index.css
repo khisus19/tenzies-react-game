@@ -60,7 +60,8 @@ body {
 }
 .dice-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-columns: repeat(5, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%,100px), 1fr));
   place-items: center;
   width: 90%;
 }

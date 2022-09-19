@@ -55,7 +55,7 @@ export default function DieSet() {
               className={die.isFrozen ? "die frozen" : "die"} 
               onClick={(event) => freezer(event, die.id)}
             >
-              <img src={`../../src/assets/die-${die.number}.svg`} />
+              <img src={`./die-${die.number}.svg`} />
             </div>
   })
   
