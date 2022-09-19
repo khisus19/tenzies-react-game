@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import Content from "./components/Content"
+import Footer from "./components/Footer"
 import './App.css'
 
 export default function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <div className="app">
       <Content />
+      <Footer />
     </div>
   )
 }

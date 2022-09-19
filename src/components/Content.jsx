@@ -4,7 +4,7 @@ import DieSet from "./DieSet";
 export default function Content() {
 
   return (
-    <main className="content">
+    <main className="main">
       <h1 className="title">Tenzies</h1>
       <p className="description">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       <DieSet />

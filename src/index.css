@@ -22,23 +22,26 @@ body {
  color: var(--white);
 }
 
-.App {
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main {
   width: 90%;
   max-width: 650px;
-  margin: 15px auto;
-  background-color: var(--soft-green);
-  border-radius: 8px;
-  color: var(--dark-blue);
-  user-select: none;
-}
-.content {
-  width: 100%;
   min-height: 400px;
+  margin: 15px auto;
   padding: 15px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  background-color: var(--soft-green);
+  border-radius: 8px;
+  color: var(--dark-blue);
+  user-select: none;
 }
 .title {
   font-size: 2.5rem;
@@ -55,12 +58,12 @@ body {
   font-size: 1.8rem;
 }
 .rolls-count {
-  font-size: 1.6rem;
-  font-weight: 800;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  font-family: serif;
 }
 .dice-grid {
   display: grid;
-  /* grid-template-columns: repeat(5, 1fr); */
   grid-template-columns: repeat(auto-fill, minmax(min(100%,100px), 1fr));
   place-items: center;
   width: 90%;
@@ -80,9 +83,6 @@ body {
   user-select: none;
   cursor: pointer;
 }
-/* .die img {
-  width: 100%;
-} */
 .frozen {
   background-color: var(--green);
   border-color: var(--green);
@@ -109,4 +109,50 @@ body {
 .confetti {
   width: inherit;
   height: 100vh;
+}
+
+/* FOOTER */
+.footer {
+	width: 100%;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: var(--dark-grey);
+}
+.footer a {
+  color: var(--white);
+  text-decoration: underline;
+}
+.footer p, ul {
+  max-width: 360px;
+	margin: 10px 10px;
+  font-size: 1rem;
+	text-align: center;
+}
+.footer ul {
+  display: flex;  
+}
+.footer li {
+  list-style: none;
+  margin: 10px 10px;
+}
+.footer a, a:visited, a:focus {
+	text-decoration: underline;
+	color: var(--green);
+}
+.footer img {
+	width: 30px;
+}
+@media screen and (min-width: 590px) {
+  .footer {
+		justify-content: space-between;    
+    position: absolute;
+    bottom: 0;
+	}
+  .footer p {
+      text-align: left;
+      max-width: 500px;
+  }
 }
